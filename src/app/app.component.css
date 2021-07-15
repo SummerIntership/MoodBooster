@@ -3,41 +3,19 @@
     font-size: 1.4em;
     padding-inline: 12px;
 }
-.hk{
+.main{
+  position: relative;
+}
+
+.navbar{
+  position: fixed;
+  background-color: 	#6b3e26a1;
+}
+.hk1{
   background-image:url("https://res.cloudinary.com/jerrick/image/upload/v1604022067/5f9b6f336982e7001d3272d2.jpg"); 
- 
-/*  background-image:url("https://iycoalition.org/wp-content/uploads/Silhouette-of-a-woman-standing-in-flower-meadow-watching-beautiful-sunset.jpg"); */
-  /*background-image:url("https://www.midcitytms.com/wp-content/uploads/2018/11/how-weather-affects-mood-1.jpg");  */
- /* background-image:url("https://www.imgbase.info/images/safe-wallpapers/miscellaneous/1_other_wallpapers/6482_1_other_wallpapers_hd_wallpapers_box_man.jpg");*/
-  /*background-image:url("https://images.theconversation.com/files/202595/original/file-20180119-80165-j3ebvk.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=900.0&fit=crop");*/
- /* background-image:url("../assets/img.svg"); 
-  */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size:cover;
   background-blend-mode:overlay;
   background-color: rgba(26, 26, 24, 0.312);
-  height: 700px;
-}
-.hk::before{
-    background-color: rgba(70, 68, 68, 0.25);
-}
-.hk h1{
-    display: block !important;
-    margin:auto;
-    font-weight: 500;
-    font-size:5em;
-    font-family: 'Hanalei',cursive;
-    color:rgb(138, 29, 138);
-    width:9em;
-    background-color:rgba(228, 225, 225, 0.578);
-}
-.hk p{
-    font-size: 2em;
-    font-weight: 490;
-    padding-top: 10px;
-      display: block;
-      margin:auto;
-      color:black;
-      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
