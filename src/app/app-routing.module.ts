@@ -8,7 +8,8 @@ const routes: Routes = [
   {path:"login",component:LoginComponent},
   {path:"testimonals",component:TestimonalsComponent},
   {path:"default",component:DefaultComponent},
-  {path:'',redirectTo:'default',pathMatch:'full'}
+  {path:'',redirectTo:'default',pathMatch:'full'},
+  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) }
 ];
 
 @NgModule({

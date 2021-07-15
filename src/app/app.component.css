@@ -1,12 +1,14 @@
 .navbar .nav-item .nav-link{
-    color: antiquewhite;
+    color: rgb(252, 249, 245);
     font-size: 1.4em;
-    padding-inline: 12px;
+    font-weight: 500;
+    padding-inline: 10px;
+    font-family: 'Acme', sans-serif;
+    margin-inline: px;
 }
 .main{
   position: relative;
 }
-
 .navbar{
   position: fixed;
   background-color: 	#6b3e26a1;
@@ -18,4 +20,21 @@
   background-size:cover;
   background-blend-mode:overlay;
   background-color: rgba(26, 26, 24, 0.312);
+}
+.hk1::before{
+  background-color: rgba(70, 68, 68, 0.25);
+}
+.navbar .nav-item .nav-link:focus{
+  background-color: 	#c2f2d0;
+  color:#98002e;
+  border-radius: 10px;
+  
+}
+.navbar .nav-item .nav-link:hover{
+  background-color: rgba(0, 0, 0, 0.377);;
+  color:white;
+  border-radius: 10px;
+  margin-bottom: 2px;
+  margin-right:2px;
+  margin-left:2px;
 }
