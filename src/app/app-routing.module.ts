@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AnalysisComponent } from './analysis/analysis.component';
+import { DefaultComponent } from './default/default.component';
 import { LoginComponent } from './login/login.component';
 import { PerformanceComponent } from './performance/performance.component';
 import { TestimonalsComponent } from './testimonals/testimonals.component';
@@ -13,7 +14,10 @@ const routes: Routes = [
     {path:"track",component:TrackComponent},
     {path:"performance",component:PerformanceComponent},
     {path:"",redirectTo:"/analysis/track",pathMatch:'full'}
-  ]}
+  ]},
+  {path:"default",component:DefaultComponent},
+  {path:'',redirectTo:'default',pathMatch:'full'},
+  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) }
 ];
 
 @NgModule({

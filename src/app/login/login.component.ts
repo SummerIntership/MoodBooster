@@ -11,5 +11,9 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  onLogin(ref:any)
+  {
+    console.log(ref.value)
+  }
 
 }

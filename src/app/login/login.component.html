@@ -1,1 +1,40 @@
-<p>login works!</p>
+<p>login works!</p>  
+<div class="hk1">
+   <div class="login">
+    <div class="col-lg-4 col-12 p-3 login-col">
+        <h1 class="text-center text-light mt-4">LOGIN</h1>
+          <form #ref="ngForm" (ngSubmit)="ref.form.valid && onLogin(ref)" class="w-80 mx-auto mt-5 login">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="un" placeholder="username" name="username" ngModel required #refun="ngModel" autocomplete="off">
+                <label for="un">Username</label>
+            </div>
+            <p class="text-danger mb-3" *ngIf="!((ref.submitted || refun.touched)&&refun.errors?.required)"></p>
+            <p class="text-white mb-3" *ngIf="(ref.submitted || refun.touched)&&refun.errors?.required">
+                *Username is required</p>
+
+            <div class="form-floating">
+                <input type="password" class="form-control" id="pw" placeholder="password" name="password" ngModel required minlength="8" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}" #refpwd="ngModel" autocomplete="off">
+                <label for="pw">Password</label>
+            </div>
+            <p class="text-danger mb-3" *ngIf="!((ref.submitted || refpwd.touched)&&refpwd.errors?.required)"></p>
+            <p class="text-white mb-3" *ngIf="(ref.submitted || refpwd.touched)&&refpwd.errors?.required">
+                *Password is required</p>
+            <p class="text-white mb-3" *ngIf="(ref.submitted || refpwd.touched)&&refpwd.errors?.minlength">
+                    *Minlength is 8 </p>
+            <p class="text-white mb-3" style="text-align: justify;"*ngIf="!((ref.submitted || refpwd.touched)&&refpwd.errors?.minlength)&&((ref.submitted || refpwd.touched)&&refpwd.errors?.pattern)">
+                    *Password should be atleast 8 characters
+                    long and should contain one number,one character and one special
+                    character</p>
+            
+
+                <div class="parent text-center" style="color: rgba(253, 128, 128, 0.938);">
+
+                </div>
+
+            <button class="btn mx-auto d-block m-4" style="background-color:#d8d9db;" type="submit">Login</button>
+            <p class="text-center text-light">Not a member?<a class="sample" [routerLink]="['/register']" style="color:rgba(255, 255, 255, 0.616);">Sign Up</a></p>
+          </form>
+
+    </div>
+   </div>
+</div>
