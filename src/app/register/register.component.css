@@ -1,0 +1,65 @@
+.hk1{
+    /*background-image:linear-gradient(217deg, rgba(243, 16, 16, 0.8), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%); 
+
+    background:image('../assets/logo.png');  
+    background: url("../img.svg")*/
+    /*background-image: image('.../assets/register.svg'); */
+
+    background-image: url("../../assets/register.svg");
+    background-repeat: no-repeat;
+    background-attachment:local;
+    background-size:cover;
+    background-blend-mode:overlay;
+  /*  background-color: rgba(26, 26, 24, 0.39);*/
+    background-color: rgba(0,0,0,0.09);
+    height: max-content;
+    padding-top: 20px;
+    padding-bottom: 100px;
+  }
+.hk1::before{
+    background-color: rgba(70, 68, 68, 0.25);
+}
+.register{
+    width:100%;
+    
+}
+.registerform{
+    width:100%;
+    background-color: rgba(0,0,0,0.3);
+}
+.sample {
+    text-decoration: underline 0.1em rgba(0, 0, 0, 0);
+    transition: text-decoration-color 300ms;
+    color: white!important;
+  }
+  .sample:hover {
+    text-decoration-color: white!important;
+    color: white !important;
+  }
+
+@media screen and (max-width: 760px) {
+    
+   .register{
+      padding-top: 210px;
+      padding-bottom: 5px;
+      margin: auto;
+      display: block;
+   }
+   .hk1{
+       background-attachment:local;
+       background-size: contain;
+       margin: auto;
+       padding-bottom: 5px;
+   }
+   .registerform{
+       margin: auto;
+       display: block;
+   }
+   .registerform h2{
+       padding-top: 10px;
+       margin-top: 0%;
+   }
+
+}

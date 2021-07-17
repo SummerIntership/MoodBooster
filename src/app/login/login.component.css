@@ -14,7 +14,7 @@
     width:85%;
 }
 .login-col{
-    border:whitesmoke solid 4px;
+    border:whitesmoke solid 2px;
     position: relative;
     box-shadow: black;
     top:90px;
@@ -23,9 +23,9 @@
     background-blend-mode:soft-light;
     background-color: rgba(83, 83, 67, 0.89);
     background-image: url("https://cdn.wallpapersafari.com/30/19/jw8muA.jpg");
-    background-image: url("https://d1csarkz8obe9u.cloudfront.net/posterpreviews/rainbow-rain-window-zoom-background-design-template-db41f72420dbd892ea0289fca40a7467_screen.jpg?ts=1586405946");
+    /*background-image: url("https://d1csarkz8obe9u.cloudfront.net/posterpreviews/rainbow-rain-window-zoom-background-design-template-db41f72420dbd892ea0289fca40a7467_screen.jpg?ts=1586405946");
     background-image: url("https://media.istockphoto.com/photos/monochrome-texture-with-white-and-gray-color-picture-id1138782666?k=6&m=1138782666&s=612x612&w=0&h=yxW7wRHOVZ5eA3aCnfNq3c5vorKgo2zmNuoIK0DFiao=");
-   /* background-image: url("https://i.ytimg.com/vi/MU0Yp0qmYEs/maxresdefault.jpg");*/
+   background-image: url("https://i.ytimg.com/vi/MU0Yp0qmYEs/maxresdefault.jpg");*/
    }
 
 .login-col::before{
@@ -41,9 +41,12 @@
   }
   .sample:hover {
     text-decoration-color: whitesmoke;
+    color: white !important;;
   }
 .form-floating{
       color:black;
+      padding-left:5px;
+      padding-right: 5px;
       border-radius: 5px;
   }
   .form-floating:hover{
@@ -68,4 +71,19 @@
   button:focus{
     background-color: rgb(45, 230, 236)!important;
     border:3px solid #45f1f1;
+}
+
+
+@media screen and (max-width: 760px) {
+    
+    .login-col{
+        position: static;
+        box-shadow: black;
+        text-align: center;
+    }
+  .login{
+      margin:auto;
+      padding-top: 90px;
+  }
+
 }

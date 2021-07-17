@@ -6,11 +6,10 @@
     font-family: 'Acme', sans-serif;
     margin-inline: px;
 }
-.main{
+/*.main{
   position: relative;
-}
+}  */
 .navbar{
-  position: fixed;
   background-color: 	#6b3e26a1;
 }
 .hk1{

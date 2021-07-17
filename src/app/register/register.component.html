@@ -1,0 +1,101 @@
+
+<div class="hk1 mx-auto d-block pt-5">
+  <div class="register">
+    <div class="col-lg-4 col-12 p-3 register-col mx-lg-auto mx-auto d-block">
+   <!--<div class="row py-3" style="justify-content: center;align-content: center;">
+        <img src="../assets/register.svg" alt="" style="width:26%;">
+    </div>  --> 
+    <div class="row registerform">
+      <h2 class="text-center text-white mt-4">SIGN UP</h2>
+      <form #ref="ngForm" (ngSubmit)="ref.form.valid && onRegister(ref)" class="mx-auto mt-3">
+
+        <div class="form-floating px-1">
+            <input type="text" class="form-control" id="fn" placeholder="first name" name="firstname" ngModel required #reffn="ngModel" autocomplete="off">
+            <label for="fn">First name</label>
+        </div>
+        <p class="text-danger mb-3 px-1" *ngIf="!((ref.submitted || reffn.touched)&&reffn.errors?.required)"></p>
+        <p class="text-white mb-3 px-1" *ngIf="(ref.submitted || reffn.touched)&&reffn.errors?.required">
+            *Firstname is required</p>
+
+        <div class="form-floating px-1">
+            <input type="text" class="form-control" id="ln" placeholder="last name" name="lastname" ngModel required #refln="ngModel" autocomplete="off">
+            <label for="ln">Last name</label>
+        </div>
+        <p class="text-danger mb-3 px-1" *ngIf="!((ref.submitted || refln.touched)&&refln.errors?.required)"></p>
+        <p class="text-white mb-3 px-1" *ngIf="(ref.submitted || refln.touched)&&refln.errors?.required">
+                *Lastname is required</p>
+
+        <div class="form-floating px-1">
+             <select class="form-select" id="gender" aria-label="Floating label select example" name="gender" ngModel required #refgen="ngModel">  
+                <option selected ></option>
+                <option *ngFor="let gender of genders;let in=index;" value="{{gender}}">{{gender}}</option>
+            </select>
+            <label for="country">Gender</label>
+        </div> 
+        <p class="text-danger mb-3 px-1" *ngIf="!((ref.submitted || refgen.touched)&&refgen.errors?.required)"></p>
+        <p class="text-white mb-3 px-1" *ngIf="(ref.submitted || refgen.touched)&&refgen.errors?.required">
+                  *Please select your gender</p>
+
+        <div class="form-floating px-1">
+            <input type="date" class="form-control" id="dob" placeholder="Date of Birth" name="dob" ngModel required #refdob="ngModel">
+            <label for="dob">Date of birth</label>
+        </div>
+        <p class="text-danger mb-3 px-1" *ngIf="!((ref.submitted || refdob.touched)&&refdob.errors?.required)"></p>
+        <p class="text-white mb-4 px-1" *ngIf="(ref.submitted || refdob.touched)&&refdob.errors?.required">
+            *DOB is required</p>
+
+        <div class="form-floating px-1">
+         <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email" ngModel required #refemail="ngModel">
+         <label for="email">Email address</label>
+        </div> 
+        <p class="text-danger mb-3 px-1" *ngIf="!((ref.submitted || refemail.touched)&&refemail.errors?.required)"></p>
+        <p class="text-white mb-4 px-1" *ngIf="(ref.submitted || refemail.touched)&&refemail.errors?.required">
+            *Email is required</p>
+
+       <!-- <div class="row mb-3 mx-auto"> -->
+        <div class="col form-floating px-1">
+            <input type="password" class="form-control" id="pw" placeholder="password" name="password" ngModel required minlength="8" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}" #refpwd="ngModel" autocomplete="off">
+            <label for="pw"> Password</label>
+        </div>
+
+        <p class="text-danger mb-3 px-1" *ngIf="!((ref.submitted || refpwd.touched)&&refpwd.errors?.required)"></p>
+        <p class="text-white mb-3 px-1" *ngIf="(ref.submitted || refpwd.touched)&&refpwd.errors?.required">
+            *Password is required</p>
+        <p class="text-white mb-3 px-1" *ngIf="(ref.submitted || refpwd.touched)&&refpwd.errors?.minlength">
+                *Minlength is 8 </p>
+        <p class="text-white mb-3 px-1" style="text-align: justify;"*ngIf="!((ref.submitted || refpwd.touched)&&refpwd.errors?.minlength)&&((ref.submitted || refpwd.touched)&&refpwd.errors?.pattern)">
+                *Password should be atleast 8 characters
+                long and should contain one number,one character and one special
+                character</p>
+
+        <div class="col form-floating px-1">
+            <input type="password" class="form-control" id="cpw" placeholder="confirm password" name="cpassword" ngModel required #refcpwd="ngModel">
+            <label for="cpw"> Confirm Password</label>  
+        </div>
+        <p class="text-danger mb-3 px-1" *ngIf="!((ref.submitted || refcpwd.touched)&&refcpwd.errors?.required)"></p>
+        <p class="text-white mb-3 px-1" *ngIf="(ref.submitted || refcpwd.touched)&&refcpwd.errors?.required">
+            *Confirm Password is required</p>
+        <p class="text-white mb-3 px-1" *ngIf="(!((ref.submitted || refcpwd.touched)&&refcpwd.errors?.required))&&(ref.submitted || refcpwd.touched)&&!(refpwd.value===refcpwd.value)">
+            *Confirm Password not matched</p>
+     <!-- </div>-->  
+        
+      <div class="px-1">
+        <label  for="photo" style="color:#efeff0" >Profile photo</label>
+        <input type="file" id="photo" class="form-control" name="photo" ngModel required #refphoto="ngModel">
+      </div>
+      <p class="text-danger mb-3 px-1" *ngIf="!((ref.submitted || refphoto.touched)&&refphoto.errors?.required)"></p>
+        <p class="text-white mb-3 px-1" *ngIf="(ref.submitted || refphoto.touched)&&refphoto.errors?.required">
+            *Profile photo is required</p>
+
+            <div class="parent text-center" style="color: rgba(252, 34, 34, 0.938);">
+
+            </div>
+
+       <button class="mt-4 btn mx-auto d-block m-4 registerbtn" style="background-color:#d8d9db;" type="submit">CONTINUE</button>
+        <p class="text-center pb-3 text-white" style="font-size: 1.1em;">Already a Member?<a class="sample" [routerLink]="['/login']" style="color:white;">Log In</a></p>
+      </form>
+      
+    </div>
+</div>
+</div>
+</div>

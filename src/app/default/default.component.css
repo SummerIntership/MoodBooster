@@ -1,31 +1,48 @@
 .hk{
-    background-image:url("https://res.cloudinary.com/jerrick/image/upload/v1604022067/5f9b6f336982e7001d3272d2.jpg"); 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size:cover;
-    background-blend-mode:overlay;
-    background-color: rgba(26, 26, 24, 0.312);
-    height: 700px;
-  }
-  .hk::before{
-      background-color: rgba(70, 68, 68, 0.25);
-  }
-  .hk h1{
-      display: block !important;
+  background-image:url("https://res.cloudinary.com/jerrick/image/upload/v1604022067/5f9b6f336982e7001d3272d2.jpg"); 
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  position:-webkit-sticky;
+  background-size:cover;
+  background-blend-mode:overlay;
+  /*background-blend-mode: darken, luminosity;*/
+  background-color: rgba(26, 26, 24, 0.312);
+  height: 700px;
+}
+.hk::before{
+    background-color: rgba(70, 68, 68, 0.25);
+}
+.hk h1{
+    display: block !important;
+    margin:auto;
+    font-weight: 500;
+    font-size:5em;
+    font-family: 'Hanalei',cursive;
+    color:rgb(138, 29, 138);
+    width:9em;
+    background-color:rgba(228, 225, 225, 0.578);
+}
+.hk p{
+    font-size: 2em;
+    font-weight: 490;
+    padding-top: 10px;
+      display: block;
       margin:auto;
-      font-weight: 500;
-      font-size:5em;
-      font-family: 'Hanalei',cursive;
-      color:rgb(138, 29, 138);
-      width:9em;
-      background-color:rgba(228, 225, 225, 0.578);
-  }
-  .hk p{
-      font-size: 2em;
-      font-weight: 490;
-      padding-top: 10px;
-        display: block;
-        margin:auto;
-        color:black;
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
+      color:black;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.navbarc{
+ /* background-color: linear-gradient(); */
+  background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+}
+
+@media screen and (max-width: 760px) {
+    .hk h1{
+      width: 4em;
+    }
+    .hk p{
+      color:aqua;
+    }
+}
