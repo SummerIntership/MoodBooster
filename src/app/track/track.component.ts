@@ -11,5 +11,10 @@ export class TrackComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  moodValue:any;
+ 
+  sendData(data:any){
+    console.log(data);
+  }
 
 }
