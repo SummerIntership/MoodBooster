@@ -1,0 +1,190 @@
+
+<div class="hk1 mx-auto d-block pt-5">
+    <div class="adddoctor">
+      <div class="col-lg-10 col-12 p-3 adddoctor-col mx-lg-auto mx-auto d-block">
+
+      <div class="row">
+          <h2>LISTS  OF  MENTAL  HEALTH  PROFESSIONALS
+              <span style="float: right;">
+                <div class=" col btn btn-info d-block mx-auto text-white mb-2" style="border-radius: 10px;font-weight:600;width:180px;">
+                    <a class="text-white"  data-bs-target="#mdl" data-bs-toggle="modal" style="text-decoration: none;font-size: 1.1em;font-weight: 700;">Add Doctor</a>
+                </div>
+              </span>
+          </h2>
+      </div>
+
+        <table class="table text-center mx-auto mt-5">
+          <thead>
+           <th>
+               <h3>Photo</h3>
+            </th>
+           <th><h3>Personal Details</h3></th>
+           <th><h3>Professional details</h3></th>
+           <th><h3>Contact</h3></th>
+           <th></th>
+         </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+          <tr  class="my-auto" style="vertical-align: middle;">  <!--*ngFor="let product of products"-->
+            <td>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/G%C3%A9rald_KIERZEK_%28Cr%C3%A9dit_Ibo%29.jpg" width="100px" alt="">
+            </td>
+            <td>
+                <h4 class="" style="font-size: 1.3em;line-height: 1.6;">Name : <span style="font-weight: 700;">ramu</span></h4>
+                <h4 class="" style="font-size: 1.3em;line-height: 1.6;"> Gender : <span style="font-weight: 700;">Male</span></h4>
+                <h4 class="" style="font-size: 1.3em;line-height: 1.6;"> Date of Birth : <span style="font-weight: 700;">23-45-56</span></h4>
+            </td>
+            <td >
+                <h4 class="" style="font-size: 1.3em;line-height: 1.6;">Specialization : <span style="font-weight: 700;">ramu</span></h4>
+                <h4 class="" style="font-size: 1.3em;line-height: 1.6;"> Experience : <span style="font-weight: 700;">Male</span></h4>
+            </td>
+            <td>
+                <h5 class="" style="font-size: 1.3em;line-height: 1.6;">Phone : <i class="fas fa-phone-alt"></i><span style="font-weight: 700;"> 9390397917</span></h5>
+                <h5 class="" style="font-size: 1.3em;line-height: 1.6;">Email : <i class="fas fa-envelope"></i><span style="font-weight: 700;"> Andrew32@gmail.com</span></h5>
+            </td>
+            <td>
+                 <button class="btn btn-danger">DELETE</button>
+            </td>
+          </tr>
+          <tr >  <!--*ngFor="let product of products"-->
+            <td>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/G%C3%A9rald_KIERZEK_%28Cr%C3%A9dit_Ibo%29.jpg" width="100px" alt="">
+            </td>
+            <td>
+                <h3>Name</h3>
+                <h3>Gender</h3>
+                <h3>Date of Birth</h3>
+            </td>
+            <td>
+                  <h3>specialization</h3>
+                  <h3>Experience</h3>
+            </td>
+            <td>
+                   <h3>email</h3>
+                   <h3>Phone Number</h3>
+            </td>
+            <td>
+                 <button class="btn btn-danger">DELETE</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="modal" data-bs-backdrop="static" id="mdl">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Add Doctor Details</h5>
+                <button class="btn btn-danger float-end" data-bs-dismiss="modal">x</button>
+            </div>
+            <div class="row adddoctors" >
+                <div class="p-3 form-col mx-lg-auto mx-auto d-block">
+                     <div class="row adddoctorform pb-3">
+                          <h1 class="pt-3"></h1>
+                       <form #ref="ngForm" (ngSubmit)="ref.form.valid && onAddDoctor(ref)" class="mx-auto mt-3">
+                 
+                         <div class="form-floating px-1">
+                             <input type="text" class="form-control" id="fn" placeholder="Full Name" name="name" ngModel required #refn="ngModel" autocomplete="off">
+                             <label for="fn">Name</label>
+                         </div>
+                         <p class="text-danger mb-3 px-1" *ngIf="!((ref.submitted || refn.touched)&&refn.errors?.required)"></p>
+                         <p class="text-white mb-3 px-1" *ngIf="(ref.submitted || refn.touched)&&refn.errors?.required">
+                             *Name is required</p>
+                        
+                        <div class="form-floating px-1">
+                            <select class="form-select" id="special" aria-label="Floating label select example" name="specialization" ngModel required #refs="ngModel">  
+                                <option selected ></option>
+                                <option *ngFor="let spec of specializations;let in=index;" value="{{spec}}">{{spec}}</option>
+                            </select>
+                            <label for="special">Speciatizations</label>
+                        </div> 
+                        <p class="text-danger mb-3 px-1" *ngIf="!((ref.submitted || refs.touched)&&refs.errors?.required)"></p>
+                        <p class="text-white mb-3 px-1" *ngIf="(ref.submitted || refs.touched)&&refs.errors?.required">
+                        *Choose your specialization</p>
+                 
+                        <div class="form-floating px-1">
+                             <input type="number" class="form-control" id="exp" placeholder="Experience" name="experience" min="1" max="5" ngModel required #refe="ngModel" autocomplete="off">
+                             <label for="exp">Experience</label>
+                        </div>
+                         <p class="text-danger mb-3 px-1" *ngIf="!((ref.submitted || refe.touched)&&refe.errors?.required)"></p>
+                         <p class="text-white mb-3 px-1" *ngIf="(ref.submitted || refe.touched)&&refe.errors?.required">
+                                    *Experience is required</p>
+
+                        <div class="form-floating px-1">
+                            <select class="form-select" id="gender" aria-label="Floating label select example" name="gender" ngModel required #refgen="ngModel">  
+                               <option selected ></option>
+                               <option *ngFor="let gender of genders;let in=index;" value="{{gender}}">{{gender}}</option>
+                            </select>
+                            <label for="country">Gender</label>
+                       </div> 
+                           <p class="text-danger mb-3 px-1" *ngIf="!((ref.submitted || refgen.touched)&&refgen.errors?.required)"></p>
+                           <p class="text-white mb-3 px-1" *ngIf="(ref.submitted || refgen.touched)&&refgen.errors?.required">
+                                     *Please select your gender</p>
+
+
+                         <div class="form-floating px-1">
+                             <input type="date" class="form-control" id="dob" placeholder="Date of Birth" name="dob" ngModel required #refdob="ngModel">
+                             <label for="dob">Date of birth</label>
+                         </div>
+                         <p class="text-danger mb-3 px-1" *ngIf="!((ref.submitted || refdob.touched)&&refdob.errors?.required)"></p>
+                         <p class="text-white mb-4 px-1" *ngIf="(ref.submitted || refdob.touched)&&refdob.errors?.required">
+                             *DOB is required</p>
+                 
+                         <div class="form-floating px-1">
+                          <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email" ngModel required #refemail="ngModel">
+                          <label for="email">Email address</label>
+                         </div> 
+                         <p class="text-danger mb-3 px-1" *ngIf="!((ref.submitted || refemail.touched)&&refemail.errors?.required)"></p>
+                         <p class="text-white mb-4 px-1" *ngIf="(ref.submitted || refemail.touched)&&refemail.errors?.required">
+                             *Email is required</p>
+                     
+                         
+                       <div class="form-floating px-1">
+                          <input type="text" class="form-control" id="phone" placeholder="9848223344" name="phone" ngModel pattern="[0-9]{10}" required minlength="10" #refp="ngModel" autocomplete="off">
+                          <label for="phone">Phone Number</label>
+                       </div>
+                         <p class="text-danger mb-3 px-1" *ngIf="!((ref.submitted || refp.touched)&&refp.errors?.required) && !((ref.submitted || refp.touched)&&refp.errors?.minlength)"></p>
+                         <p class="text-white mb-3 px-1" *ngIf="(ref.submitted || refp.touched)&&refp.errors?.required">
+                                *Phone number is required</p>
+                         <p class="text-white mb-3 px-1" *ngIf="((ref.submitted || refp.touched)&&refp.errors?.minlength)">
+                                *Invalid PhoneNumber.Check Once </p>
+
+                       <div class="px-1">
+                         <label  for="photo" style="color:#efeff0" >Profile photo</label>
+                         <input type="file" id="photo" class="form-control" name="photo" ngModel required #refphoto="ngModel">
+                       </div>
+                       <p class="text-danger mb-3 px-1" *ngIf="!((ref.submitted || refphoto.touched)&&refphoto.errors?.required)"></p>
+                         <p class="text-white mb-3 px-1" *ngIf="(ref.submitted || refphoto.touched)&&refphoto.errors?.required">
+                             *Profile photo is required</p>
+                 
+                             <div class="parent text-center" style="color: rgba(252, 34, 34, 0.938);">
+                 
+                             </div>
+                 
+                        <button class="mt-4 btn btn-warning mx-auto d-block m-4 addbtn"> ADD </button>
+                       </form>
+                       
+                     </div>
+                 </div>
+            </div>
+    </div>
+</div>
+
+</div>
