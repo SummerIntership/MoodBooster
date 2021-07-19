@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MoodBooster';
+
+  status:boolean=true;
+
+  changeStatus(){
+    this.status=!this.status;
+  }
 }

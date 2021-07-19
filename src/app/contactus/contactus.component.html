@@ -1,0 +1,44 @@
+<div class="container">
+    <!--card 1-->
+    <div class="card shadow mt-4 mb-4">
+        <!--row-->
+        <div class="row">
+            <!--col 1-->
+            <div class="col col-sm-6 mt-3 mb-3">
+                <form action="" class="ms-5" #ref="ngForm" (ngSubmit)="ref.form.valid">
+                    <h2>Get in touch</h2>
+
+                    <!--name-->
+                    <input type="text" name="name" id="name" placeholder="name" autocomplete="off" class="w-75 mt-4 border border-0 border-bottom" #refName="ngModel" ngModel required>
+                    <p class="text-danger" *ngIf="(ref.submitted || refName.touched) && refName.errors?.required"><i class="fas fa-exclamation"></i>&nbsp;&nbsp;Name is required</p>
+                    
+                    <!--email-->
+                    <input type="text" name="Email" id="email" placeholder="Email" autocomplete="off" class="w-75 mt-4 border border-0 border-bottom" ngModel #refEmail="ngModel" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                    <p class="text-danger" *ngIf="(ref.submitted || refEmail.touched) && refEmail.errors?.required"><i class="fas fa-exclamation"></i>&nbsp;&nbsp;Email is required</p>
+                    <p class="text-danger" *ngIf="(ref.submitted || refEmail.touched) && refEmail.errors?.pattern"><i class="fas fa-exclamation"></i>&nbsp;&nbsp;Enter a valid Email address</p>
+                    
+                    <!--message-->
+                    <textarea name="message" id="msg" rows="5" placeholder="Message" autocomplete="off" class="w-75 mt-4 border" ngModel #refMessage="ngModel" required minlength="10"></textarea>
+                    <p class="text-danger" *ngIf="(ref.submitted || refMessage.touched) && refMessage.errors?.required"><i class="fas fa-exclamation"></i>&nbsp;&nbsp;Message is required</p>
+                    <p class="text-danger" *ngIf="(ref.submitted || refMessage.touched) && refMessage.errors?.minlength"><i class="fas fa-exclamation"></i>&nbsp;&nbsp;Message should contain atleast 10 characters</p>
+                    
+                    <!--button-->
+                    <button class="btn btn-success d-block mt-4 shadow" type="submit">Send Message</button>
+                </form>
+            </div>
+            <!--col 2-->
+            <div class="col col-sm-6" id="col2">
+                <h2 class="mt-3">Contact us</h2>
+                <p class="mt-3 fw-bolder"><i class="fas fa-map-marker-alt"></i> Address :</p>
+                <p>H No: xxxx, Thallada,Khammam-507167</p>
+                <p class="mt-3 fw-bolder"><i class="fas fa-phone-alt"></i> Phone :</p>
+                <p>+91 xxxxxxxxx</p>
+                <p class="mt-3 fw-bolder"><i class="fas fa-paper-plane"></i> Email :</p>
+                <p>xxxxxxx@gmail.com</p>
+                <p class="mt-3 fw-bolder"><i class="fab fa-chrome"></i> Website :</p>
+                <p>xxxxx.com</p>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+#carouselExampleDark
+{
+    height: 23em;
+    width: 55em;
+    margin-left: 15.2%;
+}
+#linespace
+{
+    line-height: 4px;
+}
+.checked
+{
+    color: orange;
+}
+.parent
+{
+    display: flex;
+    margin-left: 350px;
+}
+.review
+{
+    line-height: 2px;
+}
+.carousel-indicators > li {
+    margin-left: 1%;
+    width: 12px;
+    height: 12px;
+    background-color: #404040;
+    border-radius: 50%;
+  }

@@ -1,0 +1,17 @@
+.parent
+{
+    justify-content: space-evenly;
+}
+.child
+{
+    width: 18%;
+}
+#registernow
+{
+    height: 130px;
+    background-color: black;
+}
+#registernow:hover
+{
+    background-color: rgb(151, 151, 245);
+}

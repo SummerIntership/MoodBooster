@@ -11,6 +11,9 @@ import { TrackComponent } from './track/track.component';
 import { PerformanceComponent } from './performance/performance.component';
 import { DefaultComponent } from './default/default.component';
 import { RegisterComponent } from './register/register.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { OverviewComponent } from './overview/overview.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { RegisterComponent } from './register/register.component';
     TrackComponent,
     PerformanceComponent,
     DefaultComponent,
-    RegisterComponent
+    RegisterComponent,
+    ContactusComponent,
+    PageNotFoundComponent,
+    OverviewComponent
   ],
   imports: [
     BrowserModule,
