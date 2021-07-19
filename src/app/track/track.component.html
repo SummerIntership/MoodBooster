@@ -2,8 +2,99 @@
 <div class="container">
     <h3>Hey There!</h3>
 
-    <form action="" method="post">
+ <!--  <form action="" method="post">
         <label for="mood">How Are You</label> <br>
         <button class="btn"name="subject" type="submit" value="angry"><img src="https://media.gettyimages.com/vectors/emoticon-pastel-color-vector-id1019262266?s=2048x2048" alt="not available" width=25% ></button>
-    </form>
+    </form>-->
+    <div class="card text-center">
+        <div class="card-header p-3"style="background-color:#d7c6cf">
+          How are you feeling today?
+        </div>
+        <div class="card-body" style="background-color:#faf0e6">
+            <form action="" method="post" #ref="ngForm" (ngSubmit)="sendData(ref.value)">
+                <input type="radio" name="mood" id="moodEle" class="mood" value="10" ngModel> <i class="fas fa-laugh-beam" style="color:  #a8e6cf;font-size:100px;"></i>
+                <input type="radio" name="mood" id="moodEle" class="mood" value="8"ngModel><i class="fas fa-flushed"style="color:#dcedc1;font-size:100px;"></i>
+                <input type="radio" name="mood" id="moodEle" value="6" class="mood"ngModel><i class="fas fa-frown"style="color:#ffd3b6;font-size:100px;"></i>
+                <input type="radio" name="mood" id="moodEle" class="mood" value="4"ngModel> <i class="fas fa-angry" style="color:#ffaaa5;font-size:100px;"></i>
+                <input type="radio" name="mood" id="moodEle" class="mood" value="2"ngModel> <i class="fas fa-sad-cry" style="color:	#ff8b94; font-size:100px;"></i>
+            <button type="submit" class="btn btn-primary d-block mx-auto mt-5">Confirm</button>
+            </form>
+       
+        </div>
+        <div class="card-footer text-muted p-4" style="background-color:#d7c6cf">
+        </div>
+      </div>
+
+<!--Sleep Time-->
+      <div class="card text-center mt-5" >
+        <div class="card-header p-3" style="background-color:#d7c6cf">
+          How many hours did you sleep?
+        </div>
+        <div class="card-body"style="background-color:#faf0e6" >
+            <form action="" method="post" #ref1="ngForm" (ngSubmit)="sendData(ref1.value)">
+            <input class="form-control w-25 mx-auto "type="number" name="sleepTime" min=0 max=24 id="sleepTime" ngModel>
+            <button type="submit" class="btn btn-primary d-block mx-auto mt-5">Confirm</button>
+            </form>
+        </div>
+        <div class="card-footer text-muted p-4" style="background-color:#d7c6cf">
+        </div>
+      </div>
+<!--work time-->
+      <div class="card text-center mt-5" >
+        <div class="card-header p-3" style="background-color:#d7c6cf">
+          How many hours did you work?
+        </div>
+        <div class="card-body"style="background-color:#faf0e6" >
+            <form action="" method="post" #ref3="ngForm" (ngSubmit)="sendData(ref3.value)">
+            <input type="number" class="form-control w-25 mx-auto " name="workTime"  min=0 max=24 id="sleepTime" ngModel>
+            <button type="submit" class="btn btn-primary d-block mx-auto mt-5">Confirm</button>
+            </form>
+        </div>
+        <div class="card-footer text-muted p-4" style="background-color:#d7c6cf">
+        </div>
+      </div>
+
+<!--time spent on Hobbies-->
+      <div class="card text-center mt-5" >
+        <div class="card-header p-3" style="background-color:#d7c6cf">
+          How many hours did you spend on your hobby?
+        </div>
+        <div class="card-body"style="background-color:#faf0e6" >
+            <form action="" method="post" #ref2="ngForm" (ngSubmit)="sendData(ref2.value)">
+            <input type="number" class="form-control w-25 mx-auto "name="hobbyTime"  min=0 max=24 id="sleepTime" ngModel>
+            <button type="submit" class="btn btn-primary d-block mx-auto mt-5">Confirm</button>
+            </form>
+        </div>
+        <div class="card-footer text-muted p-4" style="background-color:#d7c6cf">
+        </div>
+      </div>
+<!--exercise-->
+      <div class="card text-center mt-5" >
+        <div class="card-header p-3" style="background-color:#d7c6cf">
+          How many hours did you workout?
+        </div>
+        <div class="card-body"style="background-color:#faf0e6" >
+            <form action="" method="post" #ref3="ngForm" (ngSubmit)="sendData(ref3.value)">
+            <input type="number" class="form-control w-25 mx-auto " name="workoutTime"  min=0 max=24 id="sleepTime" ngModel>
+            <button type="submit" class="btn btn-primary d-block mx-auto mt-5">Confirm</button>
+            </form>
+        </div>
+        <div class="card-footer text-muted p-4" style="background-color:#d7c6cf">
+        </div>
+      </div>
+  <!--Screentime-->
+      <div class="card text-center mt-5" >
+        <div class="card-header p-3" style="background-color:#d7c6cf">
+          What's your screentime?
+        </div>
+        <div class="card-body"style="background-color:#faf0e6" >
+            <form action="" method="post" #ref3="ngForm" (ngSubmit)="sendData(ref3.value)">
+            <input type="number" class="form-control w-25 mx-auto " name="screenTime"  min=0 max=24 id="sleepTime" ngModel>
+            <button type="submit" class="btn btn-primary d-block mx-auto mt-5">Confirm</button>
+            </form>
+        </div>
+        <div class="card-footer text-muted p-4" style="background-color:#d7c6cf">
+        </div>
+      </div>
+    
 </div>
