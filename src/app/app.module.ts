@@ -8,6 +8,9 @@ import { LoginComponent } from './login/login.component';
 import { TestimonalsComponent } from './testimonals/testimonals.component';
 import { DefaultComponent } from './default/default.component';
 import { RegisterComponent } from './register/register.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { OverviewComponent } from './overview/overview.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { RegisterComponent } from './register/register.component';
     LoginComponent,
     TestimonalsComponent,
     DefaultComponent,
-    RegisterComponent
+    RegisterComponent,
+    ContactusComponent,
+    PageNotFoundComponent,
+    OverviewComponent
   ],
   imports: [
     BrowserModule,
