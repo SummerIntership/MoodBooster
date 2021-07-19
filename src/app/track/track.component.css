@@ -1,5 +1,11 @@
-.container{
+.card-header{
     font-family: 'Domine', serif;
-    font-size:30px;
-    
+    font-size:30px; 
+}
+.label{
+    font-size: 1em;
+    margin: auto;
+}
+.card-body .input{
+    width: 50%;
 }

@@ -1,12 +1,14 @@
 #carouselExampleDark
 {
-    height: 23em;
+    height: 26em;
     width: 55em;
     margin-left: 15.2%;
 }
 #linespace
 {
     line-height: 4px;
+    width: 58%;
+    padding-bottom: 10px;
 }
 .checked
 {
@@ -28,3 +30,24 @@
     background-color: #404040;
     border-radius: 50%;
   }
+
+  
+  .testimonals-col{
+   /*background-image: url("/../assets/reviews.svg");*/
+    background-repeat: no-repeat;
+    background-attachment:local;
+    background-size:cover;
+    background-blend-mode:overlay;
+  /*  background-color: rgba(26, 26, 24, 0.39);*/
+    background-color: rgba(17, 14, 14, 0.1);
+    height: max-content;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+.testimonals-p{
+    background-color: rgba(17, 14, 14, 0.1);
+    background-blend-mode:overlay;
+    height: max-content;
+    padding-bottom: 50px;
+}

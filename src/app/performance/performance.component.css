@@ -1,0 +1,44 @@
+.adddoctor-col{
+    padding-top: 100px;
+    /*background-image: url("/../assets/data_reports.svg");*/
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    background-size:contain;
+    background-blend-mode:overlay;
+  /*  background-color: rgba(26, 26, 24, 0.39);*/
+    background-color: rgba(184, 82, 82, 0.65);
+    height: max-content;
+    padding-bottom: 100px;
+    border:rgb(155, 248, 137) solid 3px;
+}
+.week{
+  
+  width:80%;
+  margin: auto;
+}
+.week h2{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  color:black;
+  text-align: center;
+  font-family: 'Otomanopee One', sans-serif;
+}
+.daily{
+  width:80%;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.993);
+  padding-bottom: 20px;
+}
+.daily h2{
+  margin-top: 10px;
+  padding-top: 50px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  color:black;
+  text-align: center;
+  font-family: 'Otomanopee One', sans-serif;
+}
+canvas .labels{
+  color: azure;
+}

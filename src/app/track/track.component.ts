@@ -14,7 +14,7 @@ export class TrackComponent implements OnInit {
   moodValue:any;
  
   sendData(data:any){
-    console.log(data);
+    console.log(data.value);
   }
 
 }

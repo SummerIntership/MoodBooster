@@ -9,7 +9,7 @@
       <h2 class="text-center text-white mt-4">SIGN UP</h2>
       <form #ref="ngForm" (ngSubmit)="ref.form.valid && onRegister(ref)" class="mx-auto mt-3">
 
-        <div class="form-floating px-1">
+        <div class="form-floating px-1 w-25">
             <input type="text" class="form-control" id="fn" placeholder="first name" name="firstname" ngModel required #reffn="ngModel" autocomplete="off">
             <label for="fn">First name</label>
         </div>

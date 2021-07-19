@@ -9,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { PerformanceComponent } from './performance/performance.component';
 import { TestimonalsComponent } from './testimonals/testimonals.component';
 import { TrackComponent } from './track/track.component';
+import { AdddoctorsComponent } from './admin/adddoctors/adddoctors.component';
 
 const routes: Routes = [
   {path:"login",component:LoginComponent},
@@ -22,8 +23,8 @@ const routes: Routes = [
   {path:"default",component:DefaultComponent},
   {path:"contactus",component:ContactusComponent},
   {path:'',redirectTo:'default',pathMatch:'full'},
+  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
   {path:'**',component:PageNotFoundComponent},
-  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) }
 ];
 
 @NgModule({

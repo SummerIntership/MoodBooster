@@ -1,1 +1,34 @@
 <p>performance works!</p>
+
+<div class="col-lg-11 col-12 p-3 adddoctor-col mx-lg-auto mx-auto d-block">
+    <div class="week">
+        <h2 class="mx-auto d-block" >Weekly Analysis</h2>
+        <div style="display: block;background-color: white;">
+          <canvas baseChart
+                  [datasets]="barChartData"
+                  [labels]="barChartLabels"
+                  [options]="barChartOptions"
+                  [legend]="barChartLegend"
+                  [chartType]="barChartType">
+          </canvas>
+        </div>
+    </div>
+    <div class="daily mt-5">
+      <h2 class="mx-auto d-block" >Daily Analysis</h2>
+      <div style="display: block">
+        <canvas baseChart
+                    [data]="doughnutChartData"
+                    [labels]="doughnutChartLabels"
+                    [chartType]="doughnutChartType"></canvas>
+       </div>
+    </div>
+    <!--<div class="sample">
+      <div style="display: block">
+        <canvas baseChart
+          [data]="doughnutChartData"
+          [labels]="doughnutChartLabels"
+          [chartType]="doughnutChartType">
+        </canvas>
+      </div>
+    </div> -->
+</div>
