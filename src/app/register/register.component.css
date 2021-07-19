@@ -6,7 +6,6 @@
     background:image('../assets/logo.png');  
     background: url("../img.svg")*/
     /*background-image: image('.../assets/register.svg'); */
-
     background-image: url("../../assets/register.svg");
     background-repeat: no-repeat;
     background-attachment:local;
@@ -22,9 +21,9 @@
     background-color: rgba(70, 68, 68, 0.25);
 }
 .register{
-    width:100%;
-    
+    width:100%;   
 }
+
 .registerform{
     width:100%;
     background-color: rgba(0,0,0,0.3);

@@ -1,0 +1,52 @@
+.adddoctors{
+    width:100%;
+    display: block;
+    margin: auto;
+}
+.modal-content{
+    width: 70%;
+    display: block;
+    margin: auto;
+}
+
+.adddoctorform{
+    width:100%;
+    display: block;
+    margin: auto;
+    background-color: rgba(0,0,0,0.3);
+}
+.addbtn{
+    background-color: ghostwhite;
+    border:black solid 1px;
+    font-weight: 600;
+    font-size: 1.1em;
+    font-family: 'Acme', sans-serif;
+}
+.adddoctor-col{
+    background-image: url("/../assets/medicine_blue.svg");
+    background-repeat: no-repeat;
+    background-attachment:local;
+    background-size:cover;
+    background-blend-mode:overlay;
+  /*  background-color: rgba(26, 26, 24, 0.39);*/
+    background-color: rgba(250, 245, 245, 0.880);
+    height: max-content;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+.addbtn:hover{
+   background-color:rgb(21, 250, 21);
+   color: white;
+   border:rgb(255, 250, 250) solid 2px;
+}
+.addbtn:focus{
+    background-color: lightseagreen;
+    color: seashell;
+    border:rgb(255, 251, 251) solid 1px;      
+}
+h2{
+    font-family: 'Otomanopee One', sans-serif;
+}
+td{
+  align-content: center;   
+}
