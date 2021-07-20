@@ -16,8 +16,11 @@
     display: block !important;
     margin:auto;
     font-weight: 500;
-    font-size:5em;
-    font-family: 'Hanalei',cursive;
+    font-size:4em;
+    /*font-family: 'Hanalei',cursive;*/
+    font-family: 'Kalam', cursive;
+    font-family: 'Righteous', cursive;
+    font-family: 'Sigmar One', cursive;
     color:rgb(138, 29, 138);
     width:9em;
     background-color:rgba(228, 225, 225, 0.578);
