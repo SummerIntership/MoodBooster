@@ -13,7 +13,7 @@ adminApi.post("/login",expressAsyncHandler(async (req,res,next)=>{
     let user=req.body
    // console.log(req.body)
     let adminCollectionObj=res.app.get("adminCollectionObj")
-    
+    //let productCollectionObject = req.app.get("productCollectionObject")
     let userObj= await adminCollectionObj.findOne({username:user.username})
 
     if(userObj!==undefined)
@@ -96,7 +96,26 @@ adminApi.delete("/deletedoctor/:name",expressAsyncHandler(async (req,res,next)=>
    else{
       res.send({message:"doctor unavailable"})
    }
-
 }))
+// adminApi.get("/getproducts", expressErrorHandler(async (req, res, next) => {
+
+//    let productCollectionObj = req.app.get("productCollectionObj")
+
+//    let products=await productCollectionObj.find().toArray()
+//    res.send({message:products})
+
+
+// }))
+// //add product
+// adminApi.post("/addproduct",multerCloudinary.single('photo'),expressErrorHandler(async (req,res,next)=>{
+
+//    let productCollectionObj = req.app.get("productCollectionObj")
+//    let newProduct=JSON.parse(req.body.productObj)
+//    newProduct.productImage=req.file.path;
+//    await productCollectionObj.insertOne(newProduct)
+//    res.send({message:"New Product added"})
+
+// }))
+
 
 module.exports=adminApi

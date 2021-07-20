@@ -1,0 +1,18 @@
+<div id="one" class="d-block">
+    <form #ref="ngForm" (ngSubmit)=onAddProduct(ref.value)  class=" bas w-75 mx-auto mt-5">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="card name" placeholder="card-name" name="productname" ngModel>
+            <label for="card-name">card name</label>
+        </div>
+        <div class="form-floating mb-3">
+            <textarea type="text" class="form-control" id="des" placeholder="description" name="des" ngModel></textarea>
+            <label for="des">Description</label>
+        </div>
+    
+    
+        <input type="file" name="photo" class="form-control mb-3" (change)="selectFile($event)" ngModel >
+    
+        <button class="btn btn-success d-flex mx-auto" type="submit">Add product</button>
+    </form>
+    
+    </div>

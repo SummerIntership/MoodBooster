@@ -23,4 +23,16 @@ export class AdminService {
     return this.hc.delete(`/admin/deletedoctor/${name}`)
   }
 
+  addNewProduct(newProduct:any):Observable<any>{
+
+    console.log("new product",newProduct)
+    return  this.hc.post("/product/add-product",newProduct)
+    
+  }
+  getProducts():Observable<any>{
+
+      return this.hc.get('/product/getproducts')
+
+  }
+
 }

@@ -1,0 +1,19 @@
+#one{
+    background-image:url("../../assets/images.png");
+    background-repeat: no-repeat;
+    background-attachment:local;
+    background-size:cover;
+    background-blend-mode:overlay;
+    background-color: rgba(0,0,0,0.09);
+    height: max-content;
+    padding-top: 20px;
+    padding-bottom:150px;
+    background-attachment:local;
+    background-size:cover;
+    height: 700px;
+}
+.bas{
+    padding:40px;
+    width:100%;
+    background-color: rgba(0,0,0,0.3);
+}

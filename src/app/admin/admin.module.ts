@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
 import { AdddoctorsComponent } from './adddoctors/adddoctors.component';
+import { AddCardComponent } from './add-card/add-card.component';
 
 
 @NgModule({
   declarations: [
     AdminComponent,
-    AdddoctorsComponent
+    AdddoctorsComponent,
+    AddCardComponent
   ],
   imports: [
     CommonModule,
