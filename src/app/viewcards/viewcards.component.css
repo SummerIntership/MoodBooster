@@ -1,13 +1,16 @@
  
   .flip-card {
   margin-top: 20px;
+  
   background-color: transparent;
-  width: 300px;
-  height: 300px;
   border: 1px solid #f3eeee;
   /* perspective: 1000px; */
   
   }  
+
+  .image{
+    width: 200px!important;
+  }
 
 /* This container is needed to position the front and back side */
 .flip-card-inner {
@@ -44,4 +47,16 @@
   background-color: rgb(210, 255, 244);
   color: rgb(0, 0, 0);
   transform: rotateY(180deg);
+}
+.viewcards-col{
+  background-image: url("/../assets/Online_article.svg");
+  background-repeat: no-repeat;
+  background-attachment:local;
+  background-size:cover;
+  background-blend-mode:overlay;
+/*  background-color: rgba(26, 26, 24, 0.39);*/
+  background-color: rgba(250, 245, 245, 0.89);
+  height: max-content;
+  padding-top: 20px;
+  padding-bottom: 100px;
 }

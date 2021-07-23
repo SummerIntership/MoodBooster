@@ -1,7 +1,8 @@
 <div id="one" class="d-block" >
     <div class="mx-auto d-block" style="width:60%">
-    <h2 class="text-black text-white mt-4">ADD ARTICLE TO DISCOVERY</h2>
-    <form #ref="ngForm" (ngSubmit)=onAddProduct(ref.value)  class=" bas w-75 mx-auto mt-5">
+    
+    <form #ref="ngForm" (ngSubmit)="onAddcard(ref)" class="bas mx-auto mt-5">
+        <h2 class="text-black text-white mb-5 text-center">ADD ARTICLE TO DISCOVERY</h2>
         <div class="form-floating mb-3">
             <input type="text" class="form-control" id="card name" placeholder="articlename" name="articlename" ngModel>
             <label for="card-name">Article name</label>

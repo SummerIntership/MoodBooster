@@ -27,16 +27,19 @@ export class AdminService {
     return this.hc.delete(`/admin/deletedoctor/${name}`)
   }
 
-  addNewProduct(newProduct:any):Observable<any>{
+  addcard(newcard:any):Observable<any>{
 
-    console.log("new product",newProduct)
-    return  this.hc.post("/product/add-product",newProduct)
+    //console.log("new product",newcard)
+    return  this.hc.post("/admin/add-card",newcard)
     
   }
-  getProducts():Observable<any>{
+  getcards():Observable<any>{
 
-      return this.hc.get('/product/getproducts')
+      return this.hc.get("/admin/getcardsdata")
 
+  }
+  deletecard(cn:any):Observable<any>{
+    return this.hc.delete(`/admin/deletecard/${cn}`)
   }
 
 }

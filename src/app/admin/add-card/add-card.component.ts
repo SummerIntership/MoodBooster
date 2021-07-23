@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AdminService } from '../admin.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { AdminService } from '../admin.service';
 })
 export class AddCardComponent implements OnInit {
 
-  constructor(public As:AdminService) { }
+  constructor(public As:AdminService,private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -22,8 +23,19 @@ export class AddCardComponent implements OnInit {
   }
 
 
+  onAddcard(data:any)
+  {
+    console.log(data.value)
+    this.As.addcard(data.value).subscribe(
+      res=>{
+          alert(res.message)
+      }
+    )
+    data.reset()
+    //this.router.navigateByUrl("")
+  }
 
-  onAddProduct(prodObj:any){
+ /* onAddProduct(prodObj:any){
 
     console.log("prod obj",prodObj)
     //create FOrmData obj
@@ -49,5 +61,5 @@ export class AddCardComponent implements OnInit {
       }
     )
    
-  }
+  }*/
 }

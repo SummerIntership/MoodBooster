@@ -112,6 +112,43 @@ adminApi.post("/contactus",expressAsyncHandler(async (req,res,next)=>{
 
 }))
 
+adminApi.post('/add-card',expressAsyncHandler(async (req,res,next)=>{
+    
+   let cardObj=req.body
+
+   let cardCollectionObj=res.app.get("cardCollectionObj")
+
+   await cardCollectionObj.insertOne(cardObj)
+
+   res.send({message:"successfully inserted"})
+
+}))
+
+adminApi.get('/getcardsdata',expressAsyncHandler(async (req,res,next)=>{
+  
+   let cardCollectionObj=res.app.get("cardCollectionObj")
+
+   let cards=await cardCollectionObj.find().toArray()
+
+   if(cards!=undefined)
+   {
+      res.send({message:"cards present",data:cards})
+   }
+   else{
+      res.send({message:"No cards available"})
+   }
+
+}))
+adminApi.delete('/deletecard/:cardname',expressAsyncHandler(async (req,res,next)=>{
+
+      let  name=req.params.cardname
+
+      let cardCollectionObj=res.app.get("cardCollectionObj")
+
+      await cardCollectionObj.deleteOne({articlename:name})
+      res.send({message:"successfuly deleted"})
+
+}))
 
 // adminApi.get("/getproducts", expressErrorHandler(async (req, res, next) => {
 

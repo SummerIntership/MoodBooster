@@ -21,6 +21,7 @@ let adminCollectionObj;
 let doctorCollectionObj;
 let usermoodCollectionObj;
 let contactUsCollectionObj;
+let cardCollectionObj;
 
 mc.connect(databaseUrl,{useNewUrlParser:true,useUnifiedTopology:true},(err,client)=>{
     if(err)
@@ -40,6 +41,8 @@ mc.connect(databaseUrl,{useNewUrlParser:true,useUnifiedTopology:true},(err,clien
         app.set("usermoodCollectionObj",usermoodCollectionObj)
         contactUsCollectionObj=databaseObj.collection("contactUs_Collection")
         app.set("contactUsCollectionObj",contactUsCollectionObj)
+         cardCollectionObj=databaseObj.collection("cards_Collection")
+         app.set("cardCollectionObj",cardCollectionObj)
     }
 })
 
