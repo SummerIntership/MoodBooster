@@ -10,8 +10,10 @@ import { PerformanceComponent } from './performance/performance.component';
 import { TestimonalsComponent } from './testimonals/testimonals.component';
 import { TrackComponent } from './track/track.component';
 import { AdddoctorsComponent } from './admin/adddoctors/adddoctors.component';
+import {ViewcardsComponent} from './viewcards/viewcards.component' ;
 import { FeedbackComponent } from './feedback/feedback.component';
 import { NeedHelpComponent } from './need-help/need-help.component';
+
 
 const routes: Routes = [
   {path:"login",component:LoginComponent},
@@ -23,16 +25,19 @@ const routes: Routes = [
     {path:"performance",component:PerformanceComponent},
     {path:"",redirectTo:"/analysis/track",pathMatch:'full'}
   ]},
+  {path:'viewcards',component:ViewcardsComponent},
   {path:"default",component:DefaultComponent},
   {path:"contactus",component:ContactusComponent},
   {path:"needhelp",component:NeedHelpComponent},
   {path:'',redirectTo:'default',pathMatch:'full'},
   { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
   {path:'**',component:PageNotFoundComponent},
+  
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: 
+  [RouterModule.forRoot(routes,{useHash:true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

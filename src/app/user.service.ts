@@ -24,5 +24,12 @@ export class UserService {
     //console.log("in user service admin data",admin)
     return this.hc.post("/admin/login",admin)
   }
+  AddStatusTouser(data:any):Observable<any>
+  {
+     return this.hc.post("/user/addtodaymood",data)
+  }
+  getUsermoodObject(name:any):Observable<any>{
+    return this.hc.get(`/user/getusermood/${name}`)
+  }
 
 }

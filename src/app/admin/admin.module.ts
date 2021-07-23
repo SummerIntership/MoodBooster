@@ -6,6 +6,7 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
 import { AdddoctorsComponent } from './adddoctors/adddoctors.component';
 import { AddCardComponent } from './add-card/add-card.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { AddCardComponent } from './add-card/add-card.component';
   imports: [
     CommonModule,
     AdminRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ]
 })
 export class AdminModule { }

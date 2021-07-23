@@ -9,6 +9,10 @@ export class AdminService {
 
   constructor(private hc:HttpClient) { }
 
+  getQueryToContactUs(data1:any):Observable<any>
+  {
+    return this.hc.post("/admin/contactus",data1)
+  }
   addNewdoctor(newDoc:any):Observable<any>
   {
     //console.log("data came to admin service",newDoc)

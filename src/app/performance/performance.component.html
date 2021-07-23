@@ -1,4 +1,17 @@
+<<<<<<< HEAD
+<p>performance works!</p>
+
+<div class="col-lg-11 col-12 p-3 adddoctor-col mx-lg-auto mx-auto d-block" >
+
+  <div *ngIf="!Uss.performanceStatus" >
+     <h2 class="text-center text-white"> Track Your Mood Now</h2>
+     <p class="text-center">Click <button class="btn btn-info" (click)="gotoTrackMood()">here</button> to track your mood</p>
+  </div>
+
+  <div *ngIf="Uss.performanceStatus">
+=======
 <div class="col-lg-11 col-12 p-3 adddoctor-col mx-lg-auto mx-auto d-block">
+>>>>>>> c61ae017549f07edc82e488f68b311d7b2802420
     <div class="week">
         <h2 class="mx-auto d-block" >Weekly Analysis</h2>
         <div style="display: block;background-color: white;">
@@ -11,6 +24,7 @@
           </canvas>
         </div>
     </div>
+
     <div class="daily mt-5">
       <h2 class="mx-auto d-block" >Daily Analysis</h2>
       <div style="display: block">
@@ -20,7 +34,7 @@
                     [chartType]="doughnutChartType"></canvas>
        </div>
     </div>
-    <!--<div class="sample">
+    <!-- <div class="sample">
       <div style="display: block">
         <canvas baseChart
           [data]="doughnutChartData"
@@ -29,4 +43,22 @@
         </canvas>
       </div>
     </div> -->
+   
+    <div class="screen-time mt-5">
+      <h2 class="mx-auto d-block" >Scree Time Analysis</h2>
+      <div style="display: block;">
+        <canvas baseChart
+          [datasets]="lineChartData"
+          [labels]="lineChartLabels"
+          [options]="lineChartOptions"
+          [colors]="lineChartColors"
+          [legend]="lineChartLegend"
+          [chartType]="lineChartType"
+          [plugins]="lineChartPlugins">
+        </canvas>
+      </div>
+    </div>
+
+
+  </div>
 </div>

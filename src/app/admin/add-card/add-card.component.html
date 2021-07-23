@@ -1,8 +1,18 @@
-<div id="one" class="d-block">
+<div id="one" class="d-block" >
+    <div class="mx-auto d-block" style="width:60%">
+    <h2 class="text-black text-white mt-4">ADD ARTICLE TO DISCOVERY</h2>
     <form #ref="ngForm" (ngSubmit)=onAddProduct(ref.value)  class=" bas w-75 mx-auto mt-5">
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="card name" placeholder="card-name" name="productname" ngModel>
-            <label for="card-name">card name</label>
+            <input type="text" class="form-control" id="card name" placeholder="articlename" name="articlename" ngModel>
+            <label for="card-name">Article name</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="author" placeholder="author" name="author" ngModel>
+            <label for="author">Article author</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="alink" placeholder="article link" name="link" ngModel>
+            <label for="alink">Article Link</label>
         </div>
         <div class="form-floating mb-3">
             <textarea type="text" class="form-control" id="des" placeholder="description" name="des" ngModel></textarea>
@@ -14,5 +24,5 @@
     
         <button class="btn btn-success d-flex mx-auto" type="submit">Add product</button>
     </form>
-    
+</div>
     </div>

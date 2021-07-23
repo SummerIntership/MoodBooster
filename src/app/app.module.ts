@@ -18,8 +18,10 @@ import { RegisterComponent } from './register/register.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { OverviewComponent } from './overview/overview.component';
+import { SharedModule } from './shared/shared.module';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { NeedHelpComponent } from './need-help/need-help.component';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { NeedHelpComponent } from './need-help/need-help.component';
     PageNotFoundComponent,
     OverviewComponent,
     FeedbackComponent,
-    NeedHelpComponent
+    NeedHelpComponent,
+    FeedbackComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -43,6 +47,8 @@ import { NeedHelpComponent } from './need-help/need-help.component';
     FormsModule,
     ChartsModule,
     HttpClientModule,
+    SharedModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
