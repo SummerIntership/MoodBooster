@@ -18,7 +18,12 @@ import { RegisterComponent } from './register/register.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { OverviewComponent } from './overview/overview.component';
+<<<<<<< HEAD
+import { SharedModule } from './shared/shared.module';
+
+=======
 import { FeedbackComponent } from './feedback/feedback.component';
+>>>>>>> 1f6959edcd26288fe62d05373d74a49d48ad7dad
 
 @NgModule({
   declarations: [
@@ -33,7 +38,12 @@ import { FeedbackComponent } from './feedback/feedback.component';
     ContactusComponent,
     PageNotFoundComponent,
     OverviewComponent,
+<<<<<<< HEAD
+  
+
+=======
     FeedbackComponent
+>>>>>>> 1f6959edcd26288fe62d05373d74a49d48ad7dad
   ],
   imports: [
     BrowserModule,
@@ -41,6 +51,8 @@ import { FeedbackComponent } from './feedback/feedback.component';
     FormsModule,
     ChartsModule,
     HttpClientModule,
+    SharedModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
