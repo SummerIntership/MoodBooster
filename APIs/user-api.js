@@ -76,5 +76,66 @@ userApi.post("/login",expressAsyncHandler(async (req,res,next)=>{
 
 }))
 
+userApi.post("/addtodaymood",expressAsyncHandler(async (req,res,next)=>{
+
+   let newstatusObj=req.body 
+   let usermoodCollectionObj=res.app.get("usermoodCollectionObj")
+   let pstStatusObj=await usermoodCollectionObj.findOne({firstname:newstatusObj.firstname})
+   
+ if(pstStatusObj == undefined) 
+   {
+       status=[];
+       let tObj=newstatusObj.todayObj
+       tObj.todayscore=200 + Number(tObj.mood)
+       newstatusObj.score=200+Number(tObj.mood)
+       newstatusObj.lastdate=tObj.date;
+       status.push(newstatusObj.todayObj)
+       console.log(newstatusObj) 
+
+       let finalStatusObj={};
+       finalStatusObj.firstname=newstatusObj.firstname;
+       finalStatusObj.status=status;
+       finalStatusObj.score=newstatusObj.score;
+       finalStatusObj.lastdate=newstatusObj.lastdate;
+     
+       await usermoodCollectionObj.insertOne(finalStatusObj)
+
+      // console.log("😥😥😣😣😏",finalStatusObj)
+       res.send({message:"added first day to status"})
+   }
+   else
+   {
+      //pstStatusObj=finalStatusObj
+       //status=[]
+       let tObj=newstatusObj.todayObj
+       let nObj={...newstatusObj.todayObj}
+       nObj.todayscore=pstStatusObj.score+Number(tObj.mood)
+       pstStatusObj.score=nObj.todayscore
+       pstStatusObj.lastdate=nObj.date
+       pstStatusObj.status.push(nObj)
+     // console.log("😪😥",pstStatusObj)
+      
+       await usermoodCollectionObj.updateOne({firstname:pstStatusObj.firstname},{$set:{...pstStatusObj}})
+
+      res.send({message:"just exsits here"})
+   }
+
+}))
+
+userApi.get("/getusermood/:name",expressAsyncHandler(async (req,res,next)=>{
+ 
+     let fn=req.params.name
+     let usermoodCollectionObj=res.app.get("usermoodCollectionObj")
+   let usermoodObj=await usermoodCollectionObj.findOne({firstname:fn})
+   if(usermoodObj == undefined)
+   {
+      res.send({message:"usermood not tracked yet"})
+   }
+   else
+   {
+      res.send({message:"usermoodobj exists",data:usermoodObj})
+   }
+}))
+
 
 module.exports=userApi

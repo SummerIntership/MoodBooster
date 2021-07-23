@@ -1,11 +1,12 @@
+<div class="bg">
 <div class="container">
     <!--card 1-->
-    <div class="card shadow mt-4 mb-4">
+    <div class="card pt-4 bg-muted border border-0 bg-white">
         <!--row-->
         <div class="row">
             <!--col 1-->
             <div class="col col-sm-6 mt-3 mb-3">
-                <form action="" class="ms-5" #ref="ngForm" (ngSubmit)="ref.form.valid">
+                <form action="" class="ms-5" #ref="ngForm" (ngSubmit)="ref.form.valid && onContactus(ref)">
                     <h2>Get in touch</h2>
 
                     <!--name-->
@@ -41,4 +42,5 @@
             </div>
         </div>
     </div>
+</div>
 </div>
