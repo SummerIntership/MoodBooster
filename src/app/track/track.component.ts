@@ -26,8 +26,9 @@ flag=0;
 
 gotoPerformance()
 {
+  this.updatingdata()
    this.router.navigateByUrl("/analysis/performance")
-   this.updatingdata()
+   
 }
 
   ngOnInit(): void {
@@ -52,10 +53,13 @@ gotoPerformance()
             if(this.userMoodObj.lastdate==date1)
               {
                 this.formFillStatus=true;
+
                 this.tMood=this.userMoodObj.status[this.userMoodObj.status.length-1].mood;
                 this.Uss.totalScore=this.userMoodObj.score
+
                 this.Uss.userMoodObj=this.userMoodObj
                 this.Uss.tMood=this.tMood;
+
                 this.Uss.formFillStatus=true;
                 console.log(this.tMood,"if exsists",this.formFillStatus)
                 alert("already filled the form")
@@ -64,7 +68,7 @@ gotoPerformance()
                 this.formFillStatus=false;
                 this.Uss.formFillStatus=false;
                 alert("track your mood now")
-            }
+              }
             this.Uss.performanceStatus=true;
           }
         else
@@ -106,8 +110,12 @@ gotoPerformance()
 
     this.mySubscription1=this.Us.AddStatusTouser(newusermObj).subscribe(
       res=>{
+        //this.Uss.formFillStatus=true;
+        this.Uss.userMoodObj=res.data;
+        this.Uss.tMood=this.Uss.userMoodObj.status[this.Uss.userMoodObj.status.length-1].mood;
+        this.Uss.totalScore=this.Uss.userMoodObj.score
+        this.Uss.performanceStatus=true;
           alert(res.message)
-          this.updatingdata()
           this.gotoPerformance();
           //this.updatingdata();
       },
@@ -118,11 +126,13 @@ gotoPerformance()
     )
 
     this.updatingdata();
-
+    this.Uss.formFillStatus=true;
   }
 
   updatingdata()
   {
+   // this.mySubscription.unsubscribe();
+
     let firstname=localStorage.getItem("username")
     console.log("username"," ",firstname)
     this.mySubscription2=this.Us.getUsermoodObject(firstname).subscribe(res=>{ 
@@ -167,15 +177,31 @@ gotoPerformance()
     }
 
     )
+    //this.Uss.userMoodObj=this.userMoodObj;
+    this.mySubscription2.unsubscribe();
+  }
+  initializedata()
+  {
+    let firstname=localStorage.getItem("username")
+
+    this.Us.getUsermoodObject(firstname).subscribe(
+      res=>{
+          this.Uss.userMoodObj=res.data;
+          this.Uss.tMood=this.Uss.userMoodObj.status[this.Uss.userMoodObj.status.length].mood;
+          this.Uss.totalScore=this.Uss.userMoodObj.score
+          alert("getting updated data ...................................")
+      }
+    )
   }
 
   ngOnDestroy():void {
     
-   // this.mySubscription.unsubscribe();
-   // this.mySubscription1.unsubscribe();
-   // this.mySubscription2.unsubscribe();
+    this.updatingdata()
+    //this.mySubscription.unsubscribe();
+   //this.mySubscription1.unsubscribe();
+    //this.mySubscription2.unsubscribe();
    // this.mySubscription3.unsubscribe();
-   this.updatingdata();
+  
   }
 
 

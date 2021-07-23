@@ -108,7 +108,7 @@ adminApi.post("/contactus",expressAsyncHandler(async (req,res,next)=>{
 
      await contactUsCollectionObj.insertOne(ContObj)
      
-     res.send("successfully inserted")
+     res.send({message:"successfully inserted"})
 
 }))
 

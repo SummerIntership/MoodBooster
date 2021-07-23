@@ -13,7 +13,7 @@ import { UserstatusService } from '../userstatus.service';
 export class PerformanceComponent{
 
   constructor(public Uss:UserstatusService,private router:Router) {
-    // this.updatenow();
+     this.updatenow();
    }
 
   userMoodObj=this.Uss.userMoodObj
@@ -290,6 +290,9 @@ export class PerformanceComponent{
    console.log("barlabels",barlabels)
    console.log("doughnut",doughnutdata)
    this.doughnutChartData = doughnutdata as any[];
+   this.barChartData[0].data = bardata2 as any[];
+   this.barChartData[1].data = bardata1 as any[];
+   this.barChartLabels = barlabels as any[];
  }
 
 

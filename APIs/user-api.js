@@ -101,7 +101,7 @@ userApi.post("/addtodaymood",expressAsyncHandler(async (req,res,next)=>{
        await usermoodCollectionObj.insertOne(finalStatusObj)
 
       // console.log("😥😥😣😣😏",finalStatusObj)
-       res.send({message:"added first day to status"})
+       res.send({message:"added first day to status",data:finalStatusObj})
    }
    else
    {
@@ -117,7 +117,7 @@ userApi.post("/addtodaymood",expressAsyncHandler(async (req,res,next)=>{
       
        await usermoodCollectionObj.updateOne({firstname:pstStatusObj.firstname},{$set:{...pstStatusObj}})
 
-      res.send({message:"just exsits here"})
+      res.send({message:"just exsits here",data:pstStatusObj})
    }
 
 }))
