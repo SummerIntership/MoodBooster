@@ -1,4 +1,19 @@
 #col2{
-    background-color: rgb(200, 211, 198);
-    width:49%;
+    background-image: linear-gradient(rgb(146, 146, 245),pink);
+    width:50%;
+}
+.bg
+{
+    background-image: url(D:\MoodBooster\src\assets\Scattered-Forcefields.svg);
+    background-size: cover;
+    background-position: center;
+    height: 510px;
+}
+.card
+{
+    background-image: url(D:\MoodBooster\src\assets\Scattered-Forcefields.svg);
+}
+.row
+{
+    background-image: linear-gradient(pink,rgb(146, 146, 245));
 }
