@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminService } from '../admin/admin.service';
 
 @Component({
   selector: 'app-contactus',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactusComponent implements OnInit {
 
-  constructor() { }
+  constructor(private As:AdminService) { }
 
   ngOnInit(): void {
   }
+
+onContactus(user:any)
+{
+  console.log(user.value)
+    this.As.getQueryToContactUs(user.value).subscribe(
+      res=>{
+          alert(res.message)
+      },
+      err=>{
+        console.log(err)
+       alert("something went wrong in adding data to the DB")
+      }
+    )
+}
 
 }

@@ -19,6 +19,8 @@ const databaseUrl="mongodb://agnes:Vanellope.3@littlebox-shard-00-00.u6gxv.mongo
 let usersCollectionObj;
 let adminCollectionObj;
 let doctorCollectionObj;
+let usermoodCollectionObj;
+let contactUsCollectionObj;
 
 mc.connect(databaseUrl,{useNewUrlParser:true,useUnifiedTopology:true},(err,client)=>{
     if(err)
@@ -34,6 +36,10 @@ mc.connect(databaseUrl,{useNewUrlParser:true,useUnifiedTopology:true},(err,clien
         app.set("adminCollectionObj",adminCollectionObj)
         doctorCollectionObj=databaseObj.collection("doctors_Collection")
         app.set("doctorCollectionObj",doctorCollectionObj)
+        usermoodCollectionObj=databaseObj.collection("usermood_Collection")
+        app.set("usermoodCollectionObj",usermoodCollectionObj)
+        contactUsCollectionObj=databaseObj.collection("contactUs_Collection")
+        app.set("contactUsCollectionObj",contactUsCollectionObj)
     }
 })
 

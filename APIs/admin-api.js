@@ -97,6 +97,22 @@ adminApi.delete("/deletedoctor/:name",expressAsyncHandler(async (req,res,next)=>
       res.send({message:"doctor unavailable"})
    }
 }))
+
+
+
+adminApi.post("/contactus",expressAsyncHandler(async (req,res,next)=>{
+
+     let ContObj=req.body
+  
+     let contactUsCollectionObj=res.app.get("contactUsCollectionObj") 
+
+     await contactUsCollectionObj.insertOne(ContObj)
+     
+     res.send("successfully inserted")
+
+}))
+
+
 // adminApi.get("/getproducts", expressErrorHandler(async (req, res, next) => {
 
 //    let productCollectionObj = req.app.get("productCollectionObj")

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserstatusService } from './userstatus.service';
 //import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,private Uss:UserstatusService) { }
 
   title = 'MoodBooster';
   username:any;
@@ -29,6 +30,11 @@ export class AppComponent {
     this.check=false;
     this.acheck=false;
     this.router.navigateByUrl("\default")
+    this.Uss.flag=0;
+   // this.Uss.bardata1="null"
+    //this.Uss.bardata2="null"
+    //this.Uss.barlabels="null"
+    //this.Uss.doughnutdata="null"
   }
 
 }
