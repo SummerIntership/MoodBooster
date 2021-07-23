@@ -12,4 +12,10 @@ export class NeedHelpComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  contact=false;
+  displayContact(){
+    this.contact=!this.contact;
+    console.log("called")
+  }
+
 }

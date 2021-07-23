@@ -1,13 +1,11 @@
 #one{
-<<<<<<< HEAD
     /* background-image:url("../../assets/images.png"); */
-=======
-<<<<<<< HEAD
+
+
     background-image:url("/../assets/images.png");
-=======
-    background-image:url(D:\MoodBooster\src\assets\images.png);
+    /* background-image:url(D:\MoodBooster\src\assets\images.png);
 >>>>>>> c61ae017549f07edc82e488f68b311d7b2802420
->>>>>>> 1f6959edcd26288fe62d05373d74a49d48ad7dad
+>>>>>>> 1f6959edcd26288fe62d05373d74a49d48ad7dad*/
     background-repeat: no-repeat;
     background-attachment:local;
     background-size:cover;
