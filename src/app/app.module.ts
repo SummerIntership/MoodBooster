@@ -18,6 +18,7 @@ import { RegisterComponent } from './register/register.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { OverviewComponent } from './overview/overview.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { OverviewComponent } from './overview/overview.component';
     RegisterComponent,
     ContactusComponent,
     PageNotFoundComponent,
-    OverviewComponent
+    OverviewComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,9 @@
 #one{
+<<<<<<< HEAD
     background-image:url("/../assets/images.png");
+=======
+    background-image:url(D:\MoodBooster\src\assets\images.png);
+>>>>>>> c61ae017549f07edc82e488f68b311d7b2802420
     background-repeat: no-repeat;
     background-attachment:local;
     background-size:cover;
