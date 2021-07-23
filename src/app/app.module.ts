@@ -18,6 +18,8 @@ import { RegisterComponent } from './register/register.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { OverviewComponent } from './overview/overview.component';
+import { SharedModule } from './shared/shared.module';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { OverviewComponent } from './overview/overview.component';
     RegisterComponent,
     ContactusComponent,
     PageNotFoundComponent,
-    OverviewComponent
+    OverviewComponent,
+  
+
   ],
   imports: [
     BrowserModule,
@@ -39,6 +43,8 @@ import { OverviewComponent } from './overview/overview.component';
     FormsModule,
     ChartsModule,
     HttpClientModule,
+    SharedModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
