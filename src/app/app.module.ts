@@ -21,6 +21,8 @@ import { OverviewComponent } from './overview/overview.component';
 import { SharedModule } from './shared/shared.module';
 
 import { FeedbackComponent } from './feedback/feedback.component';
+//import { FeedbackComponent } from './feedback/feedback.component';
+import { NeedHelpComponent } from './need-help/need-help.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { FeedbackComponent } from './feedback/feedback.component';
     ContactusComponent,
     PageNotFoundComponent,
     OverviewComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    NeedHelpComponent,
   ],
   imports: [
     BrowserModule,

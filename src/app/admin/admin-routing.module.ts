@@ -6,10 +6,11 @@ import { AdddoctorsComponent } from './adddoctors/adddoctors.component';
 import { AdminComponent } from './admin.component';
 
 const routes: Routes = [
-  { path: '', component: AdminComponent },
+  /*{ path: '', component: AdminComponent },*/
   {path:'adddoctors',component:AdddoctorsComponent},
   {path:'addcards',component:AddCardComponent},
-  {path:'viewcards',component:ViewcardsComponent}
+  {path:'viewcards',component:ViewcardsComponent},
+  {path:'',redirectTo:'viewcards',pathMatch:'full'},
 ];
 
 @NgModule({

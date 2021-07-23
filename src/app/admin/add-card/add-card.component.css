@@ -1,8 +1,9 @@
 #one{
     /* background-image:url("../../assets/images.png"); */
     background-image:url("/../assets/images.png");
-    background-image:url(D:\MoodBooster\src\assets\images.png);
-
+   /* background-image:url(D:\MoodBooster\src\assets\images.png);
+    background-image:url("/../assets/images.png");*/
+    /* background-image:url(D:\MoodBooster\src\assets\images.png);*/
     background-repeat: no-repeat;
     background-attachment:local;
     background-size:cover;
