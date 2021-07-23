@@ -19,6 +19,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { OverviewComponent } from './overview/overview.component';
 import { FeedbackComponent } from './feedback/feedback.component';
+import { NeedHelpComponent } from './need-help/need-help.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { FeedbackComponent } from './feedback/feedback.component';
     ContactusComponent,
     PageNotFoundComponent,
     OverviewComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    NeedHelpComponent
   ],
   imports: [
     BrowserModule,
