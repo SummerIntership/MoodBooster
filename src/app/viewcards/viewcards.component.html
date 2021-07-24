@@ -1,3 +1,11 @@
+<div class="hk d-block text-center" style="padding:7%;" >
+  <img src="" alt="">
+ <h1 class="text-center">Mental Health</h1>
+ <p class="text-center w-50 d-block" >Tips, tools, and resources to care for your mental and emotional well-being</p>
+   <p>
+    <!-- <a href="#" class="btn btn-secondary my-2">LOGIN</a>  -->
+   </p>
+</div>
 
 <div class="container viewcard">
     <div class="col-lg-12 p-3  mx-lg-auto mx-auto d-block mt-5 ">
@@ -15,9 +23,10 @@
        <div class="col" *ngFor="let card of cards;let in=index">
         <div class="card shadow" style="border-radius: 30px;position: relative;">
           <a  class="stretched-link" href="{{card['link']}}" (click)="gotothatpage(card['link'])"></a>
-          <img class="card-img-top p-3 pb-1" style="border-radius: 40px;"src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg" alt="Card image cap">
+          <img class="card-img-top p-3 pb-1" style="border-radius: 40px;"src="{{card['ilink']}}" alt="Card image cap">
           <div class="card-body">
-            <h3>{{card['articlename']}}</h3>
+            <h3 style="overflow: hidden;
+            text-overflow: ellipsis;white-space: nowrap;">{{card['articlename']}}</h3>
             <div style="position: relative;">
             <span class="text-muted">{{card['author']}}</span>
             <div class="p-0" style="position: relative;float: right;" *ngIf="App.acheck">

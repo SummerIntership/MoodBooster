@@ -9,6 +9,9 @@
 .card-body .input{
     width: 50%;
 }
+.status{
+    background-color:rgba(220, 220, 220, 0.87) ;
+}
 .status h2{
     font-family: 'Otomanopee One', sans-serif;
     color:azure;
@@ -16,5 +19,5 @@
 .status p{
     font-size: 1.3em;
     color: rgb(53, 49, 49);
-    background-color: rgba(220, 220, 220, 0.87);
+    /*background-color: rgba(220, 220, 220, 0.87);*/
 }

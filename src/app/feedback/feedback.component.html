@@ -129,8 +129,11 @@
             </div>
         </div>
         <div>
-            <button class="btn text-center d-block mx-auto bg-primary text-white mt-3">submit</button>
+            <button class="btn text-center d-block mx-auto bg-primary text-white mt-3" (click)="onfeedback()">submit</button>
         </div>
+         <div *ngIf="fedBackStatus">
+              <h2 class="text-info text-center">Thank You for your feedback!</h2>
+         </div>
     </div>
 </div>
 </div>

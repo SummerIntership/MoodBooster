@@ -31,6 +31,7 @@ export class AppComponent {
     this.acheck=false;
     this.router.navigateByUrl("\default")
     this.Uss.flag=0;
+    this.Uss.tMood=0;
    // this.Uss.bardata1="null"
     //this.Uss.bardata2="null"
     //this.Uss.barlabels="null"

@@ -14,7 +14,7 @@ performanceStatus:any;
 userMoodObj:any;
 formFillStatus:any;
 moodstatus:any;
-tMood:any;
+tMood:any=0;
 totalScore:any;
 flag:any=0;
 

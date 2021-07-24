@@ -30,6 +30,10 @@ gotoPerformance()
    this.router.navigateByUrl("/analysis/performance")
    
 }
+gotoNeedHelp()
+{
+  this.router.navigateByUrl("/needhelp")
+}
 
   ngOnInit(): void {
 

@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeedbackComponent implements OnInit {
 
+  fedBackStatus:any=false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+   onfeedback(){
+       this.fedBackStatus=true; 
+   }
 }
