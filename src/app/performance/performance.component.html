@@ -1,7 +1,4 @@
-
-<p>performance works!</p>
-
-<div class="col-lg-11 col-12 p-3 adddoctor-col mx-lg-auto mx-auto d-block" >
+<div class="mt-4 col-lg-11 col-12 p-3 adddoctor-col mx-lg-auto mx-auto d-block" >
 
   <div *ngIf="!Uss.performanceStatus" >
      <h2 class="text-center text-white"> Track Your Mood Now</h2>
@@ -23,7 +20,7 @@
     </div>
 
     <div class="daily mt-5">
-      <h2 class="mx-auto d-block" >Daily Analysis</h2>
+      <h2 class="mx-auto d-block">Daily Analysis</h2>
       <div style="display: block">
         <canvas baseChart
                     [data]="doughnutChartData"
@@ -39,7 +36,7 @@
           [chartType]="doughnutChartType">
         </canvas>
       </div>
-    </div> -->
+    </div> 
    
     <div class="screen-time mt-5">
       <h2 class="mx-auto d-block" >Scree Time Analysis</h2>
@@ -54,7 +51,7 @@
           [plugins]="lineChartPlugins">
         </canvas>
       </div>
-    </div>
+    </div> -->
 
 
   </div>

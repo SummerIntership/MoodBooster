@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-feedback',
@@ -8,12 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class FeedbackComponent implements OnInit {
 
   fedBackStatus:any=false;
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
 
    onfeedback(){
        this.fedBackStatus=true; 
+       this.router.navigateByUrl("/viewcards")
    }
 }

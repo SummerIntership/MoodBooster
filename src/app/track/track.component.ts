@@ -66,12 +66,12 @@ gotoNeedHelp()
 
                 this.Uss.formFillStatus=true;
                 console.log(this.tMood,"if exsists",this.formFillStatus)
-                alert("already filled the form")
+                //alert("already filled the form")
               }
             else{
                 this.formFillStatus=false;
                 this.Uss.formFillStatus=false;
-                alert("track your mood now")
+                //alert("track your mood now")
               }
             this.Uss.performanceStatus=true;
           }
@@ -80,7 +80,7 @@ gotoNeedHelp()
           this.formFillStatus=false;
           this.Uss.performanceStatus=false;
           this.Uss.formFillStatus=false;
-          alert("not tracked your mood yet")
+          //alert("not tracked your mood yet")
         }
           //this.Uss.userMoodObj=this.userMoodObj; 
     },
@@ -193,7 +193,7 @@ gotoNeedHelp()
           this.Uss.userMoodObj=res.data;
           this.Uss.tMood=this.Uss.userMoodObj.status[this.Uss.userMoodObj.status.length].mood;
           this.Uss.totalScore=this.Uss.userMoodObj.score
-          alert("getting updated data ...................................")
+          //alert("getting updated data ...................................")
       }
     )
   }

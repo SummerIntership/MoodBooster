@@ -14,10 +14,32 @@
 }
 .status h2{
     font-family: 'Otomanopee One', sans-serif;
-    color:azure;
+    color:rgb(34, 212, 212);
 }
 .status p{
     font-size: 1.3em;
     color: rgb(53, 49, 49);
     /*background-color: rgba(220, 220, 220, 0.87);*/
 }
+.main{
+
+    background-color: rgba(235, 53, 144, 0.445);
+}
+.main h2{
+    font-family: 'Otomanopee One', sans-serif;
+    color:rgb(8, 8, 8);
+}
+.hk{
+    background-image:url("../../assets/floral.jpg"); 
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    position:-webkit-sticky;
+    background-size:cover;
+    background-blend-mode:overlay;
+    /*background-blend-mode: darken, luminosity;*/
+    background-color: rgba(26, 26, 24, 0.312);
+    height: 700px;
+  }
+  .hk::before{
+      background-color: rgba(70, 68, 68, 0.25);
+  }

@@ -107,7 +107,7 @@
 
     
     
-    <div class="p-3 mx-lg-auto mx-auto d-block bg-warning text-center" *ngIf="Uss.formFillStatus">
+    <div class="p-3 mx-lg-auto mx-auto d-block text-center main" *ngIf="Uss.formFillStatus">
        <h2 class="text-black mx-auto text-center">TODAYS SCORE :
          <span class="text-black"*ngIf="Uss.formFillStatus">{{Uss.tMood}}</span>
        </h2>
@@ -123,11 +123,19 @@
       </div>
        <p class="text-center"> Analysis completed .Click <button class="btn btn-info" (click)="gotoPerformance()">here</button> to check your performance</p>
     </div>
+
     <div class="status text-center" >
-        
-    <div *ngIf="Uss.tMood == '100'" class="score100">
+ <!-- <div *ngIf="Uss.tMood == '100'" class="score100">
             <h2>🤩 EXCELLENT PERFORMANCE 🤩</h2>
             <h4>TASKS FOR THE DAY:</h4>
+    </div>
+    <div *ngIf="Uss.tMood == ''" class="score40">
+      <h2 class="text-danger mt-3">NO PERFORMANCE</h2>
+    </div>  -->
+
+
+    <div *ngIf="Uss.tMood == '100'" class="score100 mt-3">
+            <h2 class="text-danger">🤩 EXCELLENT PERFORMANCE 🤩</h2>
             <p style="color: hotpink;"> Keep it up </p>
             <p style="color: #ec4150;"> Reward Yourself </p>
             <p style="color:yellowgreen;"> Make time for your passion</p>
@@ -169,5 +177,50 @@
            <button class="btn btn-info" (click)="gotoNeedHelp()">Need Help!</button>
          </h4>
     </div>
-  </div>
 </div>
+
+<!--
+      <div *ngIf="Uss.tMood == '20'" class="score20 mt-3">
+      <h4>TODAY TASKS</h4>
+       <p>😀 Smile (or laugh!)  😀</p>
+       <p> Eat mood-boosting foods </p>
+       <p> Listen to a happy song</p>
+       <p> Meditate </p>
+       <p> Make sure you get enough sleep</p>
+       <p>  Take a walk </p>
+       <h4> Find a Phyisician
+         <button class="btn btn-info" (click)="gotoPerformance()">Need Help!</button>
+       </h4>
+  </div>
+
+
+
+  <div *ngIf="Uss.tMood == '40'" class="score40 mt-3">
+    <h2 class="text-danger">BAD PERFORMANCE</h2>
+    <h4>Keep on following the below tasks:</h4>
+     <p>Break out of your routine </p>
+     <p>Turn off the screens</p>
+     <p>Strike up a conversation</p>
+  </div>
+   
+
+
+  <div *ngIf="Uss.tMood == '60'" class="score60 mt-3">
+    <h2 class="text-danger">😊 GOOD PERFORMANCE 😊</h2>
+    <p>Do something new and crazy😜 </p>
+    <p>Hydrate</p>
+    <p>Do some yoga or Workout</p> 
+    <p>Spend time with your friends.</p>
+    <p>Meditate regularly</p>
+  </div>
+
+
+  <div *ngIf="Uss.tMood == '80'" class="score80 mt-3">
+    <h2 class="text-danger">😊 VERY GOOD PERFORMANCE 😊</h2> 
+    <h4>Keep on following the below tasks:</h4>
+       <p>Spend time with your pet</p>
+       <p>Socialize (with anyone)</p>
+       <p>Eat a healthy, well balanced diet</p>
+       <p>Find a hobby you love</p>
+</div>
+-->
